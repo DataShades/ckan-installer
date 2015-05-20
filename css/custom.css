@@ -32,6 +32,9 @@
 .form-block input {
 	width: 280px;
 }
+.form-block input[type=radio] {
+    width: 18px;
+}
 .form-block textarea {
 	display: block;
 	margin: 0;
@@ -84,7 +87,7 @@
 	font-size: 11px;
 	color: #282828;
 }
-[required]:after {
+span[required]:after {
 	color: #e32;
 	content: ' *';
 	display:inline;

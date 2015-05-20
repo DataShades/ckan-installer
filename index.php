@@ -6,6 +6,7 @@
   include_once 'form.php';
   include_once 'formstep0.php';
   include_once 'formstep1.php';
+  include_once 'formstep2.php';
   include_once 'thankyoustep.php';
 
   $router = Router::getInstance();
