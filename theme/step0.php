@@ -32,6 +32,19 @@
         </div>
       </div>
     </div>
+    <!--  Env file-->
+    <div class="form-block margin-top-20px height150">
+      <div class="form-label">
+        <span <?php print $this->isRequired('ckan_env_activate_file_path'); ?>><?php print $this->formItems['ckan_env_activate_file_path']['title']; ?></span>
+      </div>
+      <div class="form-radio">
+        <p><input name="ckan_env_activate_file_path" type="text" value="<?php print $this->getDefault('ckan_env_activate_file_path'); ?>" <?php print $this->isRequired('ckan_env_activate_file_path'); ?>></p>
+
+        <div class="tools width35 top green height140">
+          <span>This is the path Python virtual environment activate file. The virtualenv has to remain active for the rest of the installation and deployment process, or commands will fail. Ex. <i>/usr/lib/ckan/default/bin/activate</i></span>
+        </div>
+      </div>
+    </div>
 
     <!--  Form actions-->
     <div class="form-block form-submit margin-top-20px">

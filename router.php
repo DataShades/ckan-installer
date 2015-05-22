@@ -5,7 +5,8 @@ class Router {
     0 => 'FormStep0',
     1 => 'FormStep1',
     2 => 'FormStep2',
-    3 => 'ThankYou',
+    3 => 'FormStep3',
+    4 => 'ThankYou',
   );
   private $current_step = 0;
 

@@ -135,5 +135,40 @@ class Form {
     }
     return $val;
   }
+
+  public function isDbInitialised() {
+    $cmds = array(
+      sprintf('paster --plugin=ckan db version --config=%s', escapeshellarg($_SESSION['ckan_config_file_path'])),
+    );
+
+    return !$this->cliCommandsChain($cmds, TRUE);
+  }
+
+  /**
+   * Run chain of commands, break process and set form err
+   */
+  public function cliCommandsChain($cmds = array(), $skip_form_errors = FALSE) {
+    $fail = FALSE;
+    foreach ($cmds as $cmd) {
+      $err = 0;
+      $output_arr = array();
+
+      $command = sprintf('. %s && ', $_SESSION['ckan_env_activate_file_path']) . $cmd;
+      $output = exec($command, $output_arr, $err);
+
+      if ($err) {
+        foreach ($output_arr as $out) {
+          if (!$skip_form_errors) {
+            $this->setError($out);
+          }
+        }
+        $fail = TRUE;
+        break;
+      }
+    }
+
+    return $fail;
+  }
+
 }
 

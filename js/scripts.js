@@ -26,4 +26,13 @@ $(document).ready(function(){
             }
         });
     });
+
+    $('[name=ckan_sysadmin_skip]').change(function(){
+        if ($(this).is(':checked')) {
+            $('[type=text], [type=password]').attr('disabled', 'disabled');
+        }
+        else {
+            $('[type=text], [type=password]').removeAttr('disabled');
+        }
+    })
 });

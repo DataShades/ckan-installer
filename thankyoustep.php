@@ -7,6 +7,6 @@ class ThankYou extends Form {
 
   public function render() {
     parent::render();
-    unset($_SESSION['step1'], $_SESSION['current_step']);
+    unset($_SESSION['step1'], $_SESSION['step2'], $_SESSION['current_step']);
   }
 }
