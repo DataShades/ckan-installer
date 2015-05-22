@@ -26,10 +26,9 @@
       <div class="form-label"><span <?php print $this->isRequired('ckan_cloud_storage_enable'); ?>><?php print $this->formItems['ckan_cloud_storage_enable']['title']; ?></span></div>
       <div class="form-radio">
         <p><input name="ckan.cloud_storage_enable" type="checkbox" value="1" <?php print $this->isRequired('ckan_cloud_storage_enable'); ?> <?php print $this->getDefault('ckan_cloud_storage_enable') == '1' ? 'checked=checked' : ''; ?>></p>
-
-        <div class="tools width35 top green height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus consequatur deleniti esse expedita harum illo in maiores molestiae nam nesciunt nihil nisi nobis, provident quaerat repellendus similique tenetur vero.</span>
-        </div>
+      </div>
+      <div class="tools width35 top green height60">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus consequatur deleniti esse expedita harum illo in maiores molestiae nam nesciunt nihil nisi nobis, provident quaerat repellendus similique tenetur vero.</span>
       </div>
     </div>
     <!--  failover -->
@@ -44,10 +43,9 @@
           <input class="bottom red" <?php print $this->getDefault('ckan_cloud_failover') == '2' ? 'checked=checked' : ''; ?> title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet distinctio impedit molestiae voluptas. Adipisci distinctio possimus quisquam sit voluptatem?" name="ckan.cloud_failover" type="radio" value="2" <?php print $this->isRequired('ckan_cloud_failover'); ?>>
           <label for="ckan.cloud_failover">Abort upload</label>
         </p>
-
-        <div class="tools width35 green top height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, veritatis!</span>
-        </div>
+      </div>
+      <div class="tools width35 green top height60">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, veritatis!</span>
       </div>
     </div>
     <!-- AWS key -->
@@ -55,9 +53,9 @@
       <div class="form-label"><span <?php print $this->isRequired('ckan_s3_aws_key'); ?>><?php print $this->formItems['ckan_s3_aws_key']['title']; ?></span></div>
       <div class="form-radio">
         <p><input name="ckan.s3_aws_key" type="text" value="<?php print $this->getDefault('ckan_s3_aws_key'); ?>" <?php print $this->isRequired('ckan_s3_aws_key'); ?>></p>
-        <div class="tools width35 top green height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi culpa doloribus facilis harum in ipsa nam suscipit unde vero voluptatibus.</span>
-        </div>
+      </div>
+      <div class="tools width35 top green height60">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi culpa doloribus facilis harum in ipsa nam suscipit unde vero voluptatibus.</span>
       </div>
     </div>
     <!--AWS secret key -->
@@ -65,15 +63,15 @@
       <div class="form-label"><span <?php print $this->isRequired('ckan_s3_secret_key'); ?>><?php print $this->formItems['ckan_s3_secret_key']['title']; ?></span></div>
       <div class="form-radio">
         <p><input name="ckan.s3_secret_key" type="text" value="<?php print $this->getDefault('ckan_s3_secret_key'); ?>" <?php print $this->isRequired('ckan_s3_secret_key'); ?>></p>
-        <div class="tools width35 top green height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
-        </div>
+      </div>
+      <div class="tools width35 top green height60">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
       </div>
     </div>
     <!--  Form actions-->
     <div class="form-block form-submit margin-top-20px">
-      <input type="submit" class="submit-button" value="Back" name="prev">
-      <input type="submit" class="submit-button" value="Continue" name="next">
+      <input type="submit" class="submit-button button button-back" value="Back" name="prev">
+      <input type="submit" class="submit-button button button-submit" value="Continue" name="next">
     </div>
   </form>
 </div>

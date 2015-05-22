@@ -1,31 +1,19 @@
 $(document).ready(function(){
-    updateTooltips = function($this) {
-        var $texts = $this.attr('title');
-        var $tools = $this.parent().siblings('div')
-            .removeClass('red')
-            .removeClass('green')
-            .removeClass('top')
-            .removeClass('center')
-            .removeClass('bottom');
 
-        /*
-         ## Get the title and add to tooltip message */
-        $this.parent().siblings('div').find('span').text( $texts );
+    $(':input').on('focus', function(){
+        var $parent = $(this).parents('.form-block');
 
-        /*
-         ## Get the class and add to tooltip div container */
-        $this.parent().siblings('div').addClass( $this.attr('class') );
-    }
-	$('input[type="radio"]').on('change', function(){
-        updateTooltips($(this))
-	});
-    $(function() {
-        $('input[type="radio"]').each(function(i, e){
-            if( $(e).is(':checked') ) {
-                updateTooltips($(e))
-            }
-        });
+        $parent.find('.tools').css('display', 'block');
     });
+
+    $(':input').on('blur', function(){
+        var $parent = $(this).parents('.form-block');
+        $parent.find('.tools').css('display', 'none');
+    });
+
+    if ($('select').size() > 0) {
+        $('select').customSelect();
+    }
 
     $('[name=ckan_sysadmin_skip]').change(function(){
         if ($(this).is(':checked')) {

@@ -26,10 +26,9 @@
       <div class="form-label"><span><?php print $this->formItems['ckan_sysadmin_skip']['title']; ?></span></div>
       <div class="form-radio">
         <p><input name="ckan_sysadmin_skip" type="checkbox" value="1" ></p>
-
-        <div class="tools width35 top green height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus consequatur deleniti esse expedita harum illo in maiores molestiae nam nesciunt nihil nisi nobis, provident quaerat repellendus similique tenetur vero.</span>
-        </div>
+      </div>
+      <div class="tools">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus consequatur deleniti esse expedita harum illo in maiores molestiae nam nesciunt nihil nisi nobis, provident quaerat repellendus similique tenetur vero.</span>
       </div>
     </div>
 
@@ -38,9 +37,9 @@
       <div class="form-label"><span <?php print $this->isRequired('ckan_sysadmin_name'); ?>><?php print $this->formItems['ckan_sysadmin_name']['title']; ?></span></div>
       <div class="form-radio">
         <p><input name="ckan_sysadmin_name" type="text" value="<?php print $this->getDefault('ckan_sysadmin_name'); ?>" <?php print $this->isRequired('ckan_sysadmin_name'); ?>></p>
-        <div class="tools width35 top green height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
-        </div>
+      </div>
+      <div class="tools">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
       </div>
     </div>
     <!-- Email -->
@@ -48,9 +47,9 @@
       <div class="form-label"><span <?php print $this->isRequired('ckan_sysadmin_email'); ?>><?php print $this->formItems['ckan_sysadmin_email']['title']; ?></span></div>
       <div class="form-radio">
         <p><input name="ckan_sysadmin_email" type="text" value="<?php print $this->getDefault('ckan_sysadmin_email'); ?>" <?php print $this->isRequired('ckan_sysadmin_email'); ?>></p>
-        <div class="tools width35 top green height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
-        </div>
+      </div>
+      <div class="tools">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
       </div>
     </div>
     <!-- Password -->
@@ -58,9 +57,9 @@
       <div class="form-label"><span <?php print $this->isRequired('ckan_sysadmin_pswd'); ?>><?php print $this->formItems['ckan_sysadmin_pswd']['title']; ?></span></div>
       <div class="form-radio">
         <p><input name="ckan_sysadmin_pswd" type="password" value="<?php print $this->getDefault('ckan_sysadmin_pswd'); ?>" <?php print $this->isRequired('ckan_sysadmin_pswd'); ?>></p>
-        <div class="tools width35 top green height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
-        </div>
+      </div>
+      <div class="tools">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
       </div>
     </div>
     <!-- Confirm password -->
@@ -68,15 +67,15 @@
       <div class="form-label"><span <?php print $this->isRequired('ckan_sysadmin_pswd_rpt'); ?>><?php print $this->formItems['ckan_sysadmin_pswd_rpt']['title']; ?></span></div>
       <div class="form-radio">
         <p><input name="ckan_sysadmin_pswd_rpt" type="password" value="<?php print $this->getDefault('ckan_sysadmin_pswd_rpt'); ?>" <?php print $this->isRequired('ckan_sysadmin_pswd_rpt'); ?>></p>
-        <div class="tools width35 top green height60">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
-        </div>
+      </div>
+      <div class="tools">
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod?</span>
       </div>
     </div>
     <!--  Form actions-->
     <div class="form-block form-submit margin-top-20px">
-      <input type="submit" class="submit-button" value="Back" name="prev">
-      <input type="submit" class="submit-button" value="Continue" name="next">
+      <input type="submit" class="submit-button button button-back" value="Back" name="prev">
+      <input type="submit" class="submit-button button button-submit" value="Continue" name="next">
     </div>
   </form>
 </div>
