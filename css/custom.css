@@ -99,7 +99,7 @@ span[required]:after {
 
 
 .form-submit { margin-bottom: 20px; margin-left: 143px; padding-top: 20px; width: 434px; border-top: 1px solid #eeeeee; }
-.form-submit .button { height: 30px; color: #1e1f21; font-weight: bold; font-size: 14px; border: 1px solid #e4c600; border-radius: 4px; font-family: Arial, serif; display: inline-block; width: 209px; vertical-align: top; text-align: center; line-height: 28px; text-decoration: none; }
+.form-submit .button { height: 30px; color: #1e1f21; font-weight: bold; font-size: 14px; border: 1px solid #e4c600; border-radius: 4px; font-family: Arial, serif; display: inline-block; width: 209px; vertical-align: top; text-align: center; line-height: 25px; text-decoration: none; }
 .form-submit .button.button-submit {
 
     background: #e8df3f;
@@ -119,7 +119,7 @@ span[required]:after {
     border-radius: 0;
     border: 2px solid #cccccc;
     height: 31px;
-    line-height: 31px;
+    line-height: 25px;
     width: 434px;
     padding: 0 7px;
     background: url('../img/select-arrow.png') 99% center no-repeat;
