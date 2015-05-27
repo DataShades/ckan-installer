@@ -53,13 +53,13 @@ class FormStep0 extends Form {
 
   public function checkDependencies() {
     $apps = array(
-      'which python' => 'Python',
-      'which psql' => 'PostgreSQL',
-      'which pip' => 'pip',
-      'which virtualenv' => 'virtualenv',
-      'which git' => 'Git',
-      'which java' => 'Java',
-      'which javac' => 'Java',
+      'type python' => 'Python',
+      'type psql' => 'PostgreSQL',
+      'type pip' => 'pip',
+      'type virtualenv' => 'virtualenv',
+      'type git' => 'Git',
+      'type java' => 'Java',
+      'type javac' => 'Java',
     );
     foreach ($apps as $key => $app) {
       $err = 0;
