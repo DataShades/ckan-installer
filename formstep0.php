@@ -63,7 +63,7 @@ class FormStep0 extends Form {
       $err = 0;
       $output_arr = array();
       $command = sprintf('%s', $key);
-
+      exec($command, $output_arr, $err);
       if ($err) {
         $this->setWarning($app . ' should be installed to run CKAN');
       }
