@@ -29,7 +29,9 @@ class Form {
    * Build validate and render form
    */
   public function execute() {
+
     $this->formBuild();
+
     $router = $router = Router::getInstance();
     if (isset($_POST['next'])) {
       $this->validate();
@@ -77,7 +79,6 @@ class Form {
    */
   public function setWarning($err) {
     $_SESSION['form_warnings'][] = $err;
-    $this->valid = FALSE;
   }
 
   /**

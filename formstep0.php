@@ -41,6 +41,7 @@ class FormStep0 extends Form {
     elseif (!is_executable($_POST['ckan_env_activate_file_path'])) {
       $this->setError('Python virtual environment activate path is not executable');
     }
+
   }
 
   public function submit() {
@@ -58,6 +59,7 @@ class FormStep0 extends Form {
       'which virtualenv' => 'virtualenv',
       'which git' => 'Git',
       'which java' => 'Java',
+      'which javac' => 'Java',
     );
     foreach ($apps as $key => $app) {
       $err = 0;

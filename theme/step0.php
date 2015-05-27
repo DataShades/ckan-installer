@@ -10,6 +10,8 @@
   <p>In fact you can escape this wizard right now and go straight to your brand new CKAN instance, although it's going
     to look a bit bland and not do much so if this is the first time you've installed and used CKAN then we recommend
     you to stay with us.</p>
+
+  <p>To install required python plugins you can run under your Python virtual environment command pip install -r and path to requirements.txt in CKAN folder. For example: <br/><em>. /usr/lib/ckan/default/bin/activate</em><br/><em>pip install -r /usr/lib/ckan/default/src/ckan/requirements.txt</em></p>
   <?php if (!empty($errs)) : ?>
     <div class="message error alert alert-danger">
       <?php foreach ($errs as $err) : ?>
