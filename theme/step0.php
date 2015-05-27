@@ -17,6 +17,13 @@
       <?php endforeach; ?>
     </div>
   <?php endif; ?>
+  <?php if (!empty($warns)) : ?>
+    <div class="message warning alert alert-warning">
+      <?php foreach ($warns as $warn) : ?>
+        <p><?php print $warn; ?></p>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
 
   <form method="post" name="form-name">
     <!--  Config file-->

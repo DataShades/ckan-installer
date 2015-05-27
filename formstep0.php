@@ -8,6 +8,9 @@ class FormStep0 extends Form {
   public function formBuild() {
 
     parent::formBuild();
+
+    $this->checkDependencies();
+
     $this->formItems['ckan_config_file_path'] = array(
       'name' => 'ckan_config_file_path',
       'required' => TRUE,
@@ -45,6 +48,26 @@ class FormStep0 extends Form {
     $_SESSION['ckan_config_file_path'] = $_POST['ckan_config_file_path'];
     $_SESSION['ckan_env_activate_file_path'] = $_POST['ckan_env_activate_file_path'];
 
+  }
+
+  public function checkDependencies() {
+    $apps = array(
+      'which python' => 'Python',
+      'which psql' => 'PostgreSQL',
+      'which pip' => 'pip',
+      'which virtualenv' => 'virtualenv',
+      'which git' => 'Git',
+      'which java' => 'Java',
+    );
+    foreach ($apps as $key => $app) {
+      $err = 0;
+      $output_arr = array();
+      $command = sprintf('%s', $key);
+
+      if ($err) {
+        $this->setWarning($app . ' should be installed to run CKAN');
+      }
+    }
   }
 
 }

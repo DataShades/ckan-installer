@@ -10,6 +10,7 @@ class Form {
    */
   public function render() {
     $errs = $this->getErrors();
+    $warns = $this->getWarnings();
     include_once 'theme/html_template.php';
   }
 
@@ -72,11 +73,31 @@ class Form {
   }
 
   /**
+   * Set warning message and make form invalid
+   */
+  public function setWarning($err) {
+    $_SESSION['form_warnings'][] = $err;
+    $this->valid = FALSE;
+  }
+
+  /**
+   * Get all form warnings
+   */
+  public function getWarnings() {
+    $errs = $_SESSION['form_warnings'];
+    $_SESSION['form_warnings'] = array();
+    return $errs;
+  }
+
+  /**
    * Initialise routing
    */
   public function __construct() {
     if (!isset($_SESSION['form_errors'])) {
       $_SESSION['form_errors'] = array();
+    }
+    if (!isset($_SESSION['form_warnings'])) {
+      $_SESSION['form_warnings'] = array();
     }
   }
 
