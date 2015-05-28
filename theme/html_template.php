@@ -14,7 +14,7 @@
   <header class="masthead">
     <div class="container">
       <hgroup class="header-image">
-        <a class="logo" href="http://ckan.geo-solutions.it/"><img src="./img/ckan-logo.png" alt="GeoSolutions CKAN Demo site Logo" title="GeoSolutions CKAN Demo site Logo"></a>
+        <img src="./img/ckan-logo.png" alt="GeoSolutions CKAN Demo site Logo" title="GeoSolutions CKAN Demo site Logo">
       </hgroup>
     </div>
   </header>

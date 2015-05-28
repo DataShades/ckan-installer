@@ -35,19 +35,19 @@ class Router {
   }
 
   public function reload_page() {
-    header('Location: /');
+    header('Location: ' . $_SERVER['REQUEST_URI']);
   }
   public function next_step() {
     if ($_SESSION['current_step'] + 1 < count($this->steps)) {
       $_SESSION['current_step']++;
     }
-    header('Location: /');
+    header('Location: ' . $_SERVER['REQUEST_URI']);
   }
   public function prev_page() {
     if ($_SESSION['current_step'] > 0) {
       $_SESSION['current_step']--;
     }
-    header('Location: /');
+    header('Location: ' . $_SERVER['REQUEST_URI']);
   }
   public function get_current_step() {
     return $this->current_step;
