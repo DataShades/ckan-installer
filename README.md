@@ -18,12 +18,30 @@ Configured php and web server.
 
 ## Usage
 This instruction describe how to run installer.
+
 For Ubuntu or Debian OS
 
-1.  Run _sudo apt-get install php5 apache2_
+1.  Run command _sudo apt-get install php5 apache2_
 2.  Download source code of Installer
-3.  Create apache vhost conf file in folder /etc/apache/sites-enabled using manual https://httpd.apache.org/docs/2.2/vhosts/examples.html and point host to the CKAN installer folder
-4.  Run created host in browser and follow instructions.
+3.  Create apache vhost conf file in folder /etc/apache/sites-enabled using manual https://httpd.apache.org/docs/2.4/vhosts/examples.html and point host to the CKAN installer folder
+4.  Run command _sudo service apache2 restart_
+5.  Run created host in browser and follow instructions.
+
+For Mac OS
+
+1.  Run command _vi /etc/apache2/httd.conf_
+2.  Uncomment the following line (remove #): _LoadModule php5_module libexec/apache2/libphp5.so_
+3.  Find the following line:
+
+    _#Include /private/etc/apache2/extra/httpd-vhosts.conf_
+
+    Below it, add the following line:
+    
+    _Include /private/etc/apache2/vhosts/*.conf_
+
+4.  Run command _mkdir /etc/apache2/vhosts; cd /etc/apache2/vhosts_
+5.  Create apache vhost conf file in this folder  using manual https://httpd.apache.org/docs/2.4/vhosts/examples.html and point host to the CKAN installer folder
+6.  Run created host in browser and follow instructions.
 
 
 ### Note
