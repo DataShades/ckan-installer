@@ -16,6 +16,16 @@ Configured php and web server.
 3.  Enable and configure S3 connector it needed
 4.  If CKAN installed ability to create Sys admin user
 
+## Usage
+This instruction describe how to run installer.
+For Ubuntu or Debian OS
+
+1.  Run _sudo apt-get install php5 apache2_
+2.  Download source code of Installer
+3.  Create apache vhost conf file in folder /etc/apache/sites-enabled using manual https://httpd.apache.org/docs/2.2/vhosts/examples.html and point host to the CKAN installer folder
+4.  Run created host in browser and follow instructions.
+
+
 ### Note
 Installer script does not install CKAN instance and it dependencies.
 
